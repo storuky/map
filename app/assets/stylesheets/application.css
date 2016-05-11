@@ -1,0 +1,19 @@
+/*
+ *= normalize
+ *= require leaflet
+ *= require prune_cluster
+ *= require_tree .
+ *= require_self
+ */
+
+ #map {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+ }
+
+.nowrap {
+  white-space: nowrap;
+}

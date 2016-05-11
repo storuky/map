@@ -1,0 +1,24 @@
+# Генерируем модель
+rails g model marker lat:integer lng:integer name:string
+rake db:migrate
+
+# Создаем генератор маркеров
+# seeds.rb
+200.times do
+  FactoryGirl.create(:marker)
+end
+
+# test/factories/markers.rb
+FactoryGirl.define do
+  factory :marker do
+    lat {Faker::Address.latitude}
+    lng {Faker::Address.longitude}
+    name {Faker::Name.name}
+  end
+end
+
+# controller
+rails g controller markers
+
+# layout и markers/index
+# appliation.css и application.js

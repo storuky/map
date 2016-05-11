@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  pool: 5
+
+development:
+  <<: *default
+  database: map_dev
+
+test:
+  <<: *default
+  database: map_test
+
+staging:
+  <<: *default
+  database: map_stage
+
+release:
+  <<: *default
+  database: map_release
+
+production:
+  <<: *default
+  database: map_production

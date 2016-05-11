@@ -1,0 +1,25 @@
+h1
+  | #{@marker.name}
+.popup__address
+  | #{@marker.city}, #{@marker.address}
+
+.nowrap
+  .popup__avatar
+    img src="#{@marker.avatar}" width="120" height="120"
+  .popup__contacts
+    .popup__contact
+      b Телефон:
+      div
+        | #{@marker.phone}
+    .popup__contact
+      b Эл. почта:
+      div
+        a href="mailto:#{@marker.email}"
+          | #{@marker.email}
+    .popup__contact
+      b Вебсайт:
+      div
+        a href="${website}" target="_blank"
+          | #{@marker.website}
+p
+  | #{@marker.about}
