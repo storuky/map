@@ -10,7 +10,7 @@ The faster way is restoring from the dump (If you're using PostgreSQL).
   pg_restore -d map_dev db/db.dump
   ```
 
-Or you own can migrate your database and start seeds.
+Or you can migrate your database and start seeds.
   ```
   bundle
   rake db:create db:migrate db:seed
